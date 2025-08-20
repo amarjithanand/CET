@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 3</title>
+    <style>
+        *{
+             font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+            text-wrap: wrap;
+        }
+        body{
+            background-color:white;
+        }
+        .hero
+        {
+
+            background-image: url("https://img.freepik.com/free-photo/programming-background-collage_23-2149901789.jpg");
+            background-color: #cccccc;
+
+        }
+        .hero h1{
+            text-align: center;  
+            padding: 30px;  
+            font-size: 3rem;        
+        }
+        .table-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        h5{
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        table{
+            width: 70%;
+        }
+        td
+        {
+            text-align: center;
+        }
+        tr:nth-child(odd) {
+          background-color: rgb(144, 144, 145);
+        }
+
+        tr:nth-child(even) {
+          background: rgb(196, 196, 196);
+        }
+
+        a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .class-section{
+            text-align: center;
+            max-width: 60%;
+            margin-left: 20%;
+        }
+        .class-section p,ul,li{
+            text-align: justify;
+        }
+        .class-section img{
+            height: 250px;
+        }
+        .top{
+            padding: 20px;
+            border-radius: 50%;
+            background-color: rgb(165, 165, 165);
+            font-size: 1.5rem;
+            position: absolute;
+            right: 10px;
+            margin-bottom: 40px;
+        }
+        
+@media only screen and (min-width: 480px) {
+  .class-section{
+            max-width: 80%;
+            margin-left: 10%;
+        }
+}
+
+    </style>
+</head>
+<body>
+    <div class="hero">
+    <h1>WEB TECHNOLOGY</h1>
+    </div>
+     <h5>Table of Contents</h5>
+    <div class="table-container">
+    <table border="1" cellpadding="10px">
+        <tr>
+            <td><a href="#client">Client/Server</a></td>
+            <td><a href="#components">Components of Web</a></td>
+        </tr>
+        <tr>
+            <td><a href="#types">Types of Web Contents</a></td>
+            <td><a href="#http">HTTP-HTTP request</a></td>
+        </tr>
+        <tr>
+            <td><a href="#dynamic">Dynamic Web Page</a></td>
+            <td><a href="#application">Application Servers</a></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="#security">Web Security</a></td>
+        </tr>
+    </table>
+    </div>
+    <div class="class-section" id="client">
+        <h2>Client/Server</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg" alt="">
+        <p>The client–server model is a distributed application structure that partitions tasks or workloads between the providers of a resource or service, called servers, and service requesters, called clients.[1] Often clients and servers communicate over a computer network on separate hardware, but both client and server may be on the same device. A server host runs one or more server programs, which share their resources with clients. A client usually does not share its computing resources, but it requests content or service from a server and may share its own content as part of the request. Clients, therefore, initiate communication sessions with servers, which await incoming requests. Examples of computer applications that use the client–server model are email, network printing, and the World</p>
+    </div>
+    <div class="class-section" id="components">
+        <h2>Components of Web App</h2>
+        <img src="https://integrio.net/static/a7aa5f34582757f1ae8793302a6c0499/components-of-web-application-architechture.png" alt="">
+        <p>The internet is all about browsing websites and attaining the desired response. The number of internet users in the present decade is the highest and the number is rapidly growing due to advancements in technology. For the users, the entire process is simple, but everything major happens behind the scenes. Every time a user sends a request, it goes to the server which processes the request to take all the necessary actions. Afterward, the response is sent to the browser to provide the result to the user. However, websites are different from web applications in several ways.</p>
+    </div>
+    <div class="class-section" id="types">
+        <h2>Types of Web Contents</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0UaKUVbOwObG7UYa7CMgQCsTAcqeMkT7LNQ&s" alt="">
+        <p>
+            Web content is defined as any writing and all associated digital media, such as text, audio, video, and images published on the internet. Web content is created using many different formats: writing, photography, film, video, and images. It is generally considered a creative expression of thoughts and ideas that may or may not have a commercial purpose.
+        <ul>
+            <li>Text Content</li>
+            <li>Image Based Content</li>
+            <li>Video Content</li>
+        </ul>
+        </p>
+    </div>
+    <div class="class-section" id="http">
+        <h2>HTTP - HTTP request</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROdhT8umDzN4T6pN2X6IaCA7st9RUmfBALJQ&s" alt="">
+        <p>An HTTP request is a message sent by a client (such as a web browser) to a server to request a resource or to perform an action on a resource. It is a fundamental component of the Hypertext Transfer Protocol (HTTP), which is the foundation of data exchange on the World Wide Web.
+           <h4>HTTP Methods</h4>
+            <ul>
+                <li><b>GET : </b> Retrieves data from the server.</li>
+                <li><b>POST : </b>Sends data to the server, often to create a new resource.</li>
+                <li><b>PUT  : </b>Replaces the entire content of a resource at a specific URI.</li>
+            </ul>
+        </p>
+    </div>
+    <div class="class-section" id="dynamic">
+        <h2>Dynamic Web Page</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3dQspQKAjJUw2xYE0KcPhLNsKRORA_eAKxg&s" alt="">
+        <p>A dynamic web page is a web page whose content changes based on various factors, such as user interaction, time of day, data retrieved from a database, or other variables. Unlike static web pages, which display the same content to all visitors, dynamic pages can personalize content, offer interactive features, and provide real-time updates. </p>
+    </div>
+    <div class="class-section" id="application">
+        <h2>Application Servers</h2>
+        <img src="https://www.genband.com/sites/default/files/images/application-server-diagram.PNG" alt="">
+        <p>An application server is a type of server that hosts applications or software, delivering business applications to clients through communication protocols. It sits between the web server (or client) and the database, handling application logic, managing resources, and facilitating interaction between the user interface and the backend database.</p>
+    </div>
+    <div class="class-section" id="security">
+        <h2>Web Security</h2>
+        <img src="https://www.akamai.com/site/en/images/article/2022/common-types-of-attack-vectors.png" alt="">
+        <p>Web security refers to the measures and technologies employed to protect websites, web applications, and the data they handle from unauthorized access, attacks, and data breaches. It encompasses a wide range of practices, tools, and protocols designed to safeguard online assets and user information from various cyber threats. </p>
+    </div>
+    <a class="top" href="#">^</a>
+</body>
+</html>
+  
