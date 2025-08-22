@@ -45,19 +45,7 @@ void traverse(){
 }
 int main()
 {
-    int ch;
-    do{
-        printf("\nMENU\n1. Push\n2.Pop\n3.Traverse\n4.Exit\nEnter your choice : ");
-        scanf("%d",&ch);
-        switch(ch){
-            case 1: push();
-            break;
-            case 2: pop();
-            break;
-            case 3: traverse();
-            break;
-            default: break;
-        }
-    }while(ch<4&&ch>0);
+    char str[100];
+    
 return 0;
 }
