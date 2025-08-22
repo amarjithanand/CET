@@ -1,51 +1,41 @@
 #include<stdio.h>
+#include<string.h>
 #define MAX 10
 
-int stack[MAX];
+char stack[MAX];
 int top=-1;
-void push();
+void push(char);
 void pop();
 void traverse();
 
-void push(){
+void push(char a){
+    char item = a;
     if(top==MAX-1)
     {
         printf("Overflow Error!!!");
     }
     else{
-        int item;
-        printf("Enter the item :");
-        scanf("%d",&item);
         top++;
         stack[top]=item;
     }
 }
 void pop(){
-    if(top==-1)
-    {
-        printf("Underflow Error!!!");
-    }
-    else{
-        int item=stack[top];
-        top--;
-        printf("%d is removed",item);
-    }
+    char str1[MAX];
+        for(int i=0;top>-1;i++){
+            str1[i]=stack[top];
+            top--;
+        }        
+    printf("%s",str1);
 }
-void traverse(){
-    if(top==-1)
-    {
-        printf("Stack is empty!!!");
-    }
-    else{
-        int i;
-        for(i=top;i>=0;i--){
-            printf("%d\n",stack[i]);
-        }
-    }
-}
+
 int main()
 {
-    char str[100];
-    
+    char str[25];
+    scanf("%s",(str));
+    for(int i= 0;i<strlen(str);i++)
+    {
+        push(str[i]);
+    }
+    pop();
 return 0;
 }
