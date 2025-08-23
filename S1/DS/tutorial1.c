@@ -12,7 +12,7 @@ void push(char a){
     char item = a;
     if(top==MAX-1)
     {
-        printf("Overflow Error!!!");
+        printf("\nOverflow Error!!!");
     }
     else{
         top++;
@@ -25,12 +25,13 @@ void pop(){
             str1[i]=stack[top];
             top--;
         }        
-    printf("%s",str1);
+    printf("\n%s",str1);
 }
 
 int main()
 {
-    char str[25];
+    char str[MAX];
+    printf("\nEnter the string :");
     scanf("%s",(str));
     for(int i= 0;i<strlen(str);i++)
     {
