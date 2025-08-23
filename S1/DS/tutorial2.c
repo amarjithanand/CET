@@ -2,7 +2,7 @@
 #include<string.h>
 #define MAX 10
 
-char queue[MAX];
+int queue[MAX];
 int front=-1;
 int rear=-1;
 
@@ -30,15 +30,14 @@ int main()
     {
         ins(str[i]);
     }
-    for(int i=front;front<=rear;i++){
+    for(int i=front;front<=rear+1;i++){
         str1[i]=queue[front];
         front++;
     }
-    if(strcmpi(str1,str)){
-        printf("String is palindrome!!!");
-    }
-    else{
-        printf("String is not Palindrome!!!");
-    }
+if(!strcmpi(str,str1))
+    printf("String is palindrome!!!");
+else
+    printf("String is not palindrome!!!");
+
 return 0;
 }
