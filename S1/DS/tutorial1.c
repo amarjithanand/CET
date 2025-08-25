@@ -6,7 +6,6 @@ char stack[MAX];
 int top=-1;
 void push(char);
 void pop();
-void traverse();
 
 void push(char a){
     char item = a;

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            place-items: center;
+        }
+    </style>
+    </head>
+<body>
+    <marquee behavior="" direction="" onmouseover="this.stop()" onmouseout="this.start()"><h1>WELCOME TO FRESHER'S WORLD!!!</h1></marquee>
+    <div class="form-container">
+        <form action="#" method="post">
+            <table border="2" cellspacing="1" cellpadding="10px">
+                <tr>
+                    <td colspan="2"><h3>REGISTRATION FORM</h3></td>
+                </tr>
+                <tr>
+                    <td>NAME :</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>AGE :</td>
+                    <td><select name="age">
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="Other">Other</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>PASSWORD :</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td>RE-Enter PASSWORD :</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td rowspan="4">SELECT YOUR SECURITY QUESTION :</td>
+                    <td>
+                    <input type="radio" name="security" value="pet-name" id="pet-name">
+                    <label for="pet-name">WHAT IS YOUR PET NAME?</label></td>
+                <tr>
+                    <td><input type="radio" name="security" value="best-friend" id="best-friend">
+                    <label for="best-friend">WHO IS YOUR BEST FRIEND?</label></td>
+                </tr>
+                <tr>
+                        <td><input type="radio" name="security" value="fav-color" id="fav-color">
+                    <label for="pet-name">WHAT IS YOUR FAVOURITE COLOUR?</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="security" value="fav-teacher" id="fav-teacher">
+                    <label for="fav-teacher">WHO IS YOUR BEST FRIEND?</label></td>
+                </tr>
+                <tr>
+                    <td>ANSWER OF SECURITY QUESTION :</td>
+                    <td><input type="text" name="answer"></td>
+                </tr>
+                <tr>
+                    <td>E-MAIL :</td>
+                    <td><input type="email" name="e-mail"></td>
+                </tr>
+                <tr>
+                    <td>LANGUAGES KNOWN :</td>
+                    <td><input type="checkbox" name="languages" id="malayalam" value="malayalam">
+                    <label for="malayalam">MALAYALAM</label><br>
+                    <input type="checkbox" name="languages" id="english" value="english">
+                    <label for="english">ENGLISH</label><br>
+                    <input type="checkbox" name="languages" id="hindi" value="hindi">
+                    <label for="hindi">HINDI</label>
+                </td>
+                </tr>
+                <tr>
+                    <td rowspan=""> PHONE No.</td>
+                    <td>
+                        <table border="1">
+                            <tr>
+                            <td>Home</td>
+                            <td>Office</td>
+                            </tr>
+                            <tr>
+                            <td><input type="tel" name="phone-home"></td>
+                            <td><input type="tel" name="phone-office"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>UPLOAD CV :</td>
+                    <td><input type="file" name="cv" id="cv"></td>
+                </tr>
+                <td><input type="reset" value="RESET"></td>
+                <td><input type="submit" value="SUBMIT"></td>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
