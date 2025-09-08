@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #p2-table,#p3-table{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <table border="2" width="65%">
+        <table border="2" width="65%" id="p1-table">
             <th colspan="2"> RESUME</th>
             <tr>
                 <td>NAME</td>
@@ -27,9 +32,76 @@
             </tr>
             <tr>
                 <td style="opacity: 0.5; text-align: center;">PREVIOUS</td>
-                <td style="text-align: center;">NEXT</td>
+                <td style="text-align: center;" id="p1-next">NEXT</td>
             </tr>
         </table>
+        <table border="2" width="65%" id="p2-table">
+            <th colspan="3"> Educational Qualification</th>
+            <tr>
+                <td>SSLC</td>
+                <td>ABC SCHOOL</td>
+                <TD>DISTINCTION</TD>
+            </tr>
+             <tr>
+                <td>PLUS TWO</td>
+                <td>XYZ SCHOOL</td>
+                <TD>DISTINCTION</TD>
+            </tr>
+             <tr>
+                <td>DEGREE</td>
+                <td>PQR COLLEGE</td>
+                <TD>DISTINCTION</TD>
+            </tr>
+            <tr>
+                <td style="text-align: center;" id="p2-prev">PREVIOUS</td>
+                <TD></TD>
+                <td style="text-align: center;" id="p2-next">NEXT</td>
+            </tr>
+        </table>
+        <table border="2" width="65%" id="p3-table">
+            <tr>
+                <td>Name</td>
+                <td>Relationship</td>
+                
+            </tr>
+            <tr>
+                <td>Father-Name</td>
+                <td>Father</td>
+            </tr>
+             <tr>
+                <td>Mother-Name</td>
+                <td>Mother</td>
+            </tr>
+             <tr>
+                <td>Brother-Name</td>
+                <td>Brother</td>
+            </tr>
+            <tr>
+                <td colspan="2">HOBBIES</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" id="p3-prev">PREVIOUS</td>
+                <td style="opacity: 0.5;text-align: center;" id="p3-next">NEXT</td>
+            </tr>
+        </table>
+        
     </div>
 </body>
+<script>
+    function clear(){
+        document.getElementById("p1-table").style.display = "none";
+        document.getElementById("p2-table").style.display = "none";
+        document.getElementById("p3-table").style.display = "none";
+    }
+    document.getElementById("p1-next").addEventListener("click", function () {
+        document.getElementById("p1-table").style.display = "none";
+    document.getElementById("p2-table").style.display = "block";
+
+});
+document.getElementById("p2-next").addEventListener("click", function () {
+        document.getElementById("p2-table").style.display = "none";
+    document.getElementById("p3-table").style.display = "block";
+
+});
+</script>
 </html>
