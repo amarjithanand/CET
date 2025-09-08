@@ -5,74 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>CSS TUTORIAL</title>
-
-    <style>
-
-
-     .p1, .p2, .p3{
-display: none;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <h1 id="heading">CSS Tutorial</h1>
         <div class="container-table">
-            <div class="left-container">
-                <table border="2" cellspacing="1" cellpadding="10px" width="90%">
-                    <tr width="30%">
-                    <td id="p1">Inline</td>
-                    <td rowspan="3">
-                        <p class="p1" id="target1">
-Inline CSS refers to the method of applying styles directly to a specific HTML element using the style attribute within the element's opening tag.
-Key characteristics of Inline CSS:
+                <table border="1" cellspacing="1" cellpadding="10px" width="100%">
+                    <tr>
+                        <td colspan="4">
+                            <p class="default" id="default">
+                                <b>CSS, or Cascading Style Sheets</b>, is a stylesheet language used to describe the presentation of a document written in a markup language, most commonly HTML. It is a fundamental technology of the World Wide Web, working alongside HTML and JavaScript to create interactive and visually appealing web pages. <br><br>
+<b>Key aspects of CSS include: <br><br></b>
 
-    Direct Application:
-    Styles are embedded directly within the HTML element they are intended to style.
-    High Specificity:
-    Inline styles have the highest priority in the CSS cascade, meaning they will override styles defined in external stylesheets, internal stylesheets, and browser default styles for that particular element.
-    Limited Reusability:
-    Inline styles are specific to a single element and cannot be easily reused across multiple elements or pages, making them less efficient for consistent styling across a website.
-    Syntax:
-    The style attribute is added to the HTML tag, and CSS property-value pairs are defined within its value, separated by semicolons.
+    <b>Styling and Layout: <br><br></b>
+    CSS controls the visual appearance and layout of web page elements. This includes properties like fonts, colors, spacing, dimensions, positioning, and responsiveness for different screen sizes. <br><br>
+    <b>Separation of Concerns: <br><br></b>
+    A core principle of CSS is the separation of content (HTML) from presentation (CSS). This makes websites easier to maintain, update, and more flexible for different display media (e.g., screen, print). <br><br>
+    <b>Cascading and Specificity: <br><br></b>
+    The "Cascading" in CSS refers to the rules that govern how styles are applied when multiple rules might conflict. This involves a system of specificity and inheritance to determine which styles take precedence. <br><br>
+    <b>Syntax: <br><br></b>
+    CSS rules consist of a selector (targeting HTML elements) and a declaration block. The declaration block contains one or more declarations, each with a property (e.g., color, font-size) and its corresponding value (e.g., blue, 16px).
+                            </p>
+                        <p class="p1" id="target1">
+<b>Inline CSS</b> refers to the method of applying styles directly to a specific HTML element using the style attribute within the element's opening tag. <br> <br>
+<b>Key characteristics of Inline CSS:</b><br><br>
+
+    <b>Direct Application: <br><br></b>
+    Styles are embedded directly within the HTML element they are intended to style. <br><br>
+   <b> High Specificity: <br><br></b>
+    Inline styles have the highest priority in the CSS cascade, meaning they will override styles defined in external stylesheets, internal stylesheets, and browser default styles for that particular element. <br><br>
+    <b>Limited Reusability: <br><br></b>
+    Inline styles are specific to a single element and cannot be easily reused across multiple elements or pages, making them less efficient for consistent styling across a website. <br><br>
+    <b>Syntax: <br><br></b>
+    The style attribute is added to the HTML tag, and CSS property-value pairs are defined within its value, separated by semicolons. <br><br>
 </p>
                 <p class="p2" id="target2">
-Internal CSS, also known as embedded CSS, is a method of applying styles to an HTML document where the CSS rules are placed directly within the &lt;style&gt; element in the &lt;head&gt; section of a single HTML page.
-This method is suitable for styling a specific page or elements within that page that require unique styles not shared by other pages on a website.
+<b>Internal CSS</b>, also known as embedded CSS, is a method of applying styles to an HTML document where the CSS rules are placed directly within the &lt;style&gt; element in the &lt;head&gt; section of a single HTML page. <br><br>
+This method is suitable for styling a specific page or elements within that page that require unique styles not shared by other pages on a website. <br><br>
+<b>Advantages of Internal CSS</b><br><br>
+
+    <b>Localized Styling:</b> <br><br>
+     Keeps styles within the HTML file, avoiding conflicts with other pages and making it easier to manage styles at the local level. <br><br>
+    <b>Higher Specificity: </b> <br><br>
+     CSS has higher specificity than external CSS, allowing easier overriding of external styles within the same HTML file. <br><br>
+    <b>Performance:</b> <br><br>
+     Reduces HTTP requests, potentially enhancing performance as no additional CSS files need to be loaded. <br><br>
+    <b>Ease of Implementation: </b> <br><br>
+    Simple to use and implement, making it easy to quickly apply styles to a single page.
  </p>
-                <p class="p3" id="target3">External CSS refers to a method of styling web pages where the CSS rules are defined in a separate file, distinct from the HTML document. This external file typically has a .css extension. 
-Key characteristics and advantages of External CSS:
+                <p class="p3" id="target3"><b>External CSS</b> refers to a method of styling web pages where the CSS rules are defined in a separate file, distinct from the HTML document. This external file typically has a .css extension.  <br><br>
+<b>Key characteristics and advantages of External CSS: <br><br></b>
 
-    Separation of Concerns:
-    It promotes a clear separation between content (HTML) and presentation (CSS), making the code more organized, readable, and maintainable.
-    Reusability:
-    A single external CSS file can be linked to multiple HTML pages, allowing for consistent styling across an entire website. Changes made in the CSS file are automatically reflected on all linked pages.
-    Maintainability:
-    Updating the design or layout of a website becomes more efficient as changes only need to be made in one central CSS file, rather than modifying individual HTML files.
-    Improved Load Times:
-    Once the external CSS file is downloaded by the browser, it can be cached, leading to faster loading times for subsequent pages that use the same stylesheet.
+   <b> Separation of Concerns: <br><br></b>
+    It promotes a clear separation between content (HTML) and presentation (CSS), making the code more organized, readable, and maintainable. <br><br>
+    <b>Reusability:</b> <br><br>
+    A single external CSS file can be linked to multiple HTML pages, allowing for consistent styling across an entire website. Changes made in the CSS file are automatically reflected on all linked pages. <br><br>
+    <b>Maintainability: <br><br></b>
+    Updating the design or layout of a website becomes more efficient as changes only need to be made in one central CSS file, rather than modifying individual HTML files. <br><br>
+    <b>Improved Load Times: <br><br></b>
+    Once the external CSS file is downloaded by the browser, it can be cached, leading to faster loading times for subsequent pages that use the same stylesheet. <br><br>
+<b>
+How to implement External CSS: <br><br></b>
 
-How to implement External CSS:
-
-    Create a CSS file: Create a new file with a .css extension (e.g., styles.css) and write your CSS rules within this file</p>
+    Create a CSS file <br><br>Create a new file with a .css extension (e.g., styles.css) <br><br>Write your CSS rules within this file</p>
                     </td>
                     </tr>
-                    <tr>
-                    <td id="p2">Internal</td></tr>
-                    <tr>
+                    <tr width="30%">
+                    <td id="home">Introduction</td> 
+                    <td id="p1">Inline</td> 
+                    <td id="p2">Internal</td>
                     <td id="p3">External</td>
                     </tr>
                 </table>
-            </div>
         </div>
     </div>
     <script>
 
         function clear(){
+    document.getElementById("default").style.display = "none";
     document.getElementById("target1").style.display = "none";
     document.getElementById("target2").style.display = "none";
     document.getElementById("target3").style.display = "none";
         }
+         document.getElementById("home").addEventListener("click", function () {
+        clear();
+    document.getElementById("default").style.display = "block";
+});
        document.getElementById("p1").addEventListener("click", function () {
         clear();
     document.getElementById("target1").style.display = "block";

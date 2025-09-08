@@ -2,14 +2,31 @@
     background-color: aliceblue;
 }
 #heading{
-    color: blue;
+    color: white;
     text-align: center;
+    text-decoration: underline;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 5rem;
+    background-image: url('https://cdn.mos.cms.futurecdn.net/Vp9WvV7YKdH4k8sKRePcE8.jpg');
 } 
+ .p1, .p2, .p3{
+display: none;
+        }
 p{
-    color: blueviolet;
+    color: rgb(10, 10, 10);
     text-align:justify ;
 }
 .container
 {
-    color: #00b7ff;
+    color: #000000;
+    padding-left: 8%;
+    padding-right: 8%;
+    
+}
+td{
+    text-align: center;
+}
+#p1,#p2,#p3,#home{
+    font-weight: 800;
 }
