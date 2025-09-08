@@ -1,0 +1,15 @@
+*{
+    background-color: aliceblue;
+}
+#heading{
+    color: blue;
+    text-align: center;
+} 
+p{
+    color: blueviolet;
+    text-align:justify ;
+}
+.container
+{
+    color: #00b7ff;
+}

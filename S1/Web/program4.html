@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title> 
     <style>
-        .container{
-            display: grid;
-            place-items: center;
+        *{
+           background-color: aliceblue;
         }
+        input{
+            background-color: beige;
+        } 
     </style>
     </head>
 <body>
@@ -17,7 +19,7 @@
         <form action="#" method="post">
             <table border="2" cellspacing="1" cellpadding="10px">
                 <tr>
-                    <td colspan="2"><h3>REGISTRATION FORM</h3></td>
+                    <th colspan="2"><h3>REGISTRATION FORM</h3></th>
                 </tr>
                 <tr>
                     <td>NAME :</td>
@@ -96,8 +98,8 @@
                     <td>UPLOAD CV :</td>
                     <td><input type="file" name="cv" id="cv"></td>
                 </tr>
-                <td><input type="reset" value="RESET"></td>
-                <td><input type="submit" value="SUBMIT"></td>
+                <th><input type="reset" value="RESET" style="border-radius: 20px;"></th>
+                <th><input type="submit" value="SUBMIT" style="border-radius: 20px;"></th>
             </table>
         </form>
     </div>

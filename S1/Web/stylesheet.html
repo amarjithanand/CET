@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS TUTORIAL</title>
+
+    <style>
+
+
+     .p1, .p2, .p3{
+display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">CSS Tutorial</h1>
+        <div class="container-table">
+            <div class="left-container">
+                <table border="2" cellspacing="1" cellpadding="10px" width="90%">
+                    <tr width="30%">
+                    <td id="p1">Inline</td>
+                    <td rowspan="3">
+                        <p class="p1" id="target1">
+Inline CSS refers to the method of applying styles directly to a specific HTML element using the style attribute within the element's opening tag.
+Key characteristics of Inline CSS:
+
+    Direct Application:
+    Styles are embedded directly within the HTML element they are intended to style.
+    High Specificity:
+    Inline styles have the highest priority in the CSS cascade, meaning they will override styles defined in external stylesheets, internal stylesheets, and browser default styles for that particular element.
+    Limited Reusability:
+    Inline styles are specific to a single element and cannot be easily reused across multiple elements or pages, making them less efficient for consistent styling across a website.
+    Syntax:
+    The style attribute is added to the HTML tag, and CSS property-value pairs are defined within its value, separated by semicolons.
+</p>
+                <p class="p2" id="target2">
+Internal CSS, also known as embedded CSS, is a method of applying styles to an HTML document where the CSS rules are placed directly within the &lt;style&gt; element in the &lt;head&gt; section of a single HTML page.
+This method is suitable for styling a specific page or elements within that page that require unique styles not shared by other pages on a website.
+ </p>
+                <p class="p3" id="target3">External CSS refers to a method of styling web pages where the CSS rules are defined in a separate file, distinct from the HTML document. This external file typically has a .css extension. 
+Key characteristics and advantages of External CSS:
+
+    Separation of Concerns:
+    It promotes a clear separation between content (HTML) and presentation (CSS), making the code more organized, readable, and maintainable.
+    Reusability:
+    A single external CSS file can be linked to multiple HTML pages, allowing for consistent styling across an entire website. Changes made in the CSS file are automatically reflected on all linked pages.
+    Maintainability:
+    Updating the design or layout of a website becomes more efficient as changes only need to be made in one central CSS file, rather than modifying individual HTML files.
+    Improved Load Times:
+    Once the external CSS file is downloaded by the browser, it can be cached, leading to faster loading times for subsequent pages that use the same stylesheet.
+
+How to implement External CSS:
+
+    Create a CSS file: Create a new file with a .css extension (e.g., styles.css) and write your CSS rules within this file</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td id="p2">Internal</td></tr>
+                    <tr>
+                    <td id="p3">External</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function clear(){
+    document.getElementById("target1").style.display = "none";
+    document.getElementById("target2").style.display = "none";
+    document.getElementById("target3").style.display = "none";
+        }
+       document.getElementById("p1").addEventListener("click", function () {
+        clear();
+    document.getElementById("target1").style.display = "block";
+});
+
+document.getElementById("p2").addEventListener("click", function () {
+            clear();
+
+    document.getElementById("target2").style.display = "block";
+});
+
+document.getElementById("p3").addEventListener("click", function () {
+            clear();
+
+    document.getElementById("target3").style.display = "block";
+});
+
+
+
+        
+    </script>
+</body>
+</html>
