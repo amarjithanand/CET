@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <table border="2" width="65%" id="p1-table">
+        <table border="2" width="65%" id="p1-table" cellpadding="12px">
             <th colspan="2"> RESUME</th>
             <tr>
                 <td>NAME</td>
@@ -35,7 +35,7 @@
                 <td style="text-align: center;" id="p1-next">NEXT</td>
             </tr>
         </table>
-        <table border="2" width="65%" id="p2-table">
+        <table border="2" width="65%" id="p2-table" cellpadding="7px">
             <th colspan="3"> Educational Qualification</th>
             <tr>
                 <td>SSLC</td>
@@ -58,7 +58,7 @@
                 <td style="text-align: center;" id="p2-next">NEXT</td>
             </tr>
         </table>
-        <table border="2" width="65%" id="p3-table">
+        <table border="2" width="65%" id="p3-table" cellpadding="10px">
             <tr>
                 <td>Name</td>
                 <td>Relationship</td>
@@ -80,6 +80,22 @@
                 <td colspan="2">HOBBIES</td>
             </tr>
             <tr>
+                <td colspan="2"><ul>
+                    <li>Reading Books</li>
+                    <li>Listening Music</li>
+                    <li>Playing Cricket</li>
+                </ul></td>
+            </tr>
+            <tr>
+                <td>Favourite Movie</td>
+                <td>Spider Man</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    I hereby declare that all the information given is correct in my knowledge.
+                </td>
+            </tr>
+            <tr>
                 <td style="text-align: center;" id="p3-prev">PREVIOUS</td>
                 <td style="opacity: 0.5;text-align: center;" id="p3-next">NEXT</td>
             </tr>
@@ -95,6 +111,16 @@
     }
     document.getElementById("p1-next").addEventListener("click", function () {
         document.getElementById("p1-table").style.display = "none";
+    document.getElementById("p2-table").style.display = "block";
+
+});
+    document.getElementById("p2-prev").addEventListener("click", function () {
+        document.getElementById("p2-table").style.display = "none";
+    document.getElementById("p1-table").style.display = "block";
+
+});
+ document.getElementById("p3-prev").addEventListener("click", function () {
+        document.getElementById("p3-table").style.display = "none";
     document.getElementById("p2-table").style.display = "block";
 
 });
