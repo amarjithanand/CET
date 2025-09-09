@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>CSS TUTORIAL</title>
+    <style>
+        #link-section{
+            color: aqua;
+        }
+        #course{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <h1 id="heading">CSS Tutorial</h1>
+                <button onclick="nav();" id="go-to">Go To Course</button>
         <div class="container-table">
                 <table border="1" cellspacing="1" cellpadding="10px" width="100%">
                     <tr>
@@ -70,7 +79,7 @@ How to implement External CSS: <br><br></b>
     Create a CSS file <br><br>Create a new file with a .css extension (e.g., styles.css) <br><br>Write your CSS rules within this file</p>
                     </td>
                     </tr>
-                    <tr width="30%">
+                    <tr width="30%" id="link-section">
                     <td id="home">Introduction</td> 
                     <td id="p1">Inline</td> 
                     <td id="p2">Internal</td>
@@ -79,7 +88,78 @@ How to implement External CSS: <br><br></b>
                 </table>
         </div>
     </div>
+    <div id="course">
+        <h1>CSS TUTORIALS</h1>
+        <p>Learning CSS may be a daunting task. In order to help you, we have written 
+            numerous tutorials about CSS. Some are aimed at complete beginners, while 
+            others present complex features to be used by more experienced users.<br><br>
+            This page lists them all, with a short description. They are grouped by complexity
+             so that you can choose the most appropriate for your level.</p>
+             <h3>In this article</h3>
+             <p>
+                <a href="#basics">Beginner-Level CSS Tutorials</a><br>
+                <a href="#intermediate">Intermediate-Level CSS Tutorials</a><br>
+                <a href="#advanced">Advanced-Level CSS Tutorials</a>
+             </p>
+             <h3 id="basics">Beginner-level CSS tutorials</h3>
+             <p>CSS basics <br>
+
+    This guide is aimed at complete beginners: You haven't written one single line of CSS? — this is for you. It explains the fundamental concepts of the language and guides you in writing basic stylesheets. <br><br>
+<b>Using multiple backgrounds</b> <br><br>
+
+    Backgrounds are fundamental for nice styling: CSS allows you to set several of them on each box. This tutorial explains how they interact and how to achieve nice effects. <br><br>
+<b>Resizing background images</b> <br><br>
+
+    CSS allows you to resize images used as an element's background. This tutorial describes how to achieve this. <br><br>
+<b>Using media queries</b> <br><br>
+
+    The size of the screens, or the kind of devices like touchscreens or printed sheets vary greatly nowadays. Media queries are the fundamental building blocks in building websites that render everywhere in their best quality. <br><br>
+<b>Understanding CSS z-index</b> <br><br>
+
+    Controlling superposition of boxes is a basic feature that is very quickly needed by Web developers. Though not that difficult, it requires a basic knowledge of CSS. <br><br>
+
+             </p>
+             <h3 id="intermediate">Intermediate-level CSS tutorials</h3>
+             <p>
+                After the release of CSS 2 (Level 1), new features have been added to CSS. Some of them are fancy and are pretty self-contained. They are easy to use for anybody with a fair knowledge of basic concepts. <br><br>
+
+<b>CSS Counter Styles</b> <br><br>
+
+    Counting items and pages is an easy task in CSS. Learn to use counter-reset, counter-increment, counters(), and counter(). <br><br>
+<b>CSS Animations</b> <br><br>
+
+    CSS Animations allow you to define configurations of style, as keyframes, and to transition between them defining an animation. <br><br>
+<b>CSS Transitions</b> <br><br>
+
+    CSS Transitions allow you to define an animation between several styles and to control the way this transition happens. <br><br>
+<b>CSS Transforms</b> <br><br>
+
+    Transforms allow you to change the position of elements by modifying their coordinate space: it allows for translating, rotating, and deforming them in the 2D or 3D spaces. <br><br>
+<b>CSS Gradients</b> <br><br>
+
+    Gradients are images that transition smoothly from one color to another. There are several types of gradients allowed in CSS: linear or radial, repeating or not. This tutorial describes how to use them. <br><br>
+
+             </p>
+             <h3 id="advanced">Advanced-level CSS tutorials</h3>
+             <p>
+                CSS also got new features allowing you to create complex layouts. Though the simplest way to achieve such layout, they are more complex to use for people without too much experience. <br><br>
+
+<b>CSS multi-column layouts</b> <br><br>
+
+    CSS3 introduces a new layout allowing you to easily define multiple columns in an element. Though multi-column text is not that common on devices like screens, this is particularly useful on printed pages, or for indexes. <br><br>
+<b>CSS flexible boxes layouts</b> <br><br>
+
+    This new layout allow you to give boxes flexibility, allowing them to be resized smoothly. It is a powerful way to describe complex interfaces.
+
+             </p>
+
+    </div>
     <script>
+        function nav(){
+            document.getElementById("container").style.display="none";
+            document.getElementById("go-to").style.display="none";
+            document.getElementById("course").style.display="block";
+        }
 
         function clear(){
     document.getElementById("default").style.display = "none";
@@ -107,10 +187,6 @@ document.getElementById("p3").addEventListener("click", function () {
 
     document.getElementById("target3").style.display = "block";
 });
-
-
-
-        
     </script>
 </body>
 </html>
