@@ -31,7 +31,7 @@ void traverse(struct sll *sl)
 void pop(struct sll *sl){
     if(sl->h==NULL)
     {
-        printf("\nNo items");
+        printf("\nUnderflow");
     }
     else{
         int item;
@@ -46,7 +46,7 @@ int main()
     int ch;
     struct sll sl;
     sl.h = NULL;
-    do{ printf("\nMENU\n1. Push\n2. Pop\n3.  Traversal\n 4. Exit\nEnter your choice : ");
+    do{ printf("\nMENU\n1. Push\n2. Pop\n3.  Traversal\n4. Exit\nEnter your choice : ");
         scanf("%d",&ch);
         switch(ch){
             case 1: push(&sl);
