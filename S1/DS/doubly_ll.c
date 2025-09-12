@@ -174,19 +174,19 @@ int ch;
         scanf("%d",&ch);
         switch(ch){
             case 1: insStart(&dl);
-            break;
-            case 2: insMiddle(&dl);
-            break;
+                    break;
+            case 2: insMiddle(&dl);   
+                    break;
             case 3: insEnd(&dl);
-            break;
+                    break;
             case 4: delFirst(&dl);
-            break;
+                    break;
             case 5: delMiddle(&dl);
-            break;
+                    break;
             case 6: delEnd(&dl);
-            break;
+                    break;
             case 7: forwardTraversal(&dl);
-            break;
+                    break;
             case 8: backwardTraversal(&dl);
                     break;
         }
