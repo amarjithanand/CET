@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="result"></h3>
+    <button onclick="Round()">Round(4.6)</button><br><br>
+    <button onclick="power()">Power(2,3)</button><br><br>
+    <button onclick="Abs()">abs(-25)</button><br><br>
+    <button onclick="Floor()">floor(9.9)</button><br><br>
+    <button onclick="Ceil()">ceil(9.1)</button><br><br>
+    <script>
+    function Round()
+    {
+        document.getElementById("result").innerHTML = Math.round(4.6);
+    }
+    function power()
+    {
+        document.getElementById("result").innerHTML= Math.pow(2,3);
+    }
+    function Abs()
+    {
+        document.getElementById("result").innerHTML= Math.abs(-25);
+    }
+    function Floor()
+    {
+        document.getElementById("result").innerHTML= Math.floor(9.9);
+    }
+    function Ceil()
+    {
+        document.getElementById("result").innerHTML= Math.ceil(9.1);
+    }
+    </script>
+
+</body>
+</html>

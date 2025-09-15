@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script String Functions</title>
+</head>
+<body>
+
+<h3 id="string1">Hello </h3>
+<h3 id="string2">World</h3>
+<h3 id="result"></h3>
+<button onclick="len()">Length(x)</button><br><br>
+<button onclick="charAtFunc()">charAt(4)</button><br><br>
+<button onclick="concatFunc()">concat(x,y)</button><br><br>
+<button onclick="indexing()">x[3]</button><br><br>
+<button onclick="sliceFunc()">slice(2,4)</button><br><br>
+<button onclick="substringFunc()">substring(2,5)</button><br><br>
+<button onclick="substrFunc()">substr(2,5)</button><br><br>
+<button onclick="upper()">toUpperCase(x)</button><br><br>
+<button onclick="lower()">toLowerCase(x)</button><br><br>
+<script>
+    let x = document.getElementById("string1").innerHTML;
+    let y = document.getElementById("string2").innerHTML;
+    function len(){
+        document.getElementById("result").innerHTML= x.length;
+    }
+    function charAtFunc(){
+        document.getElementById("result").innerHTML= x.charAt(4);
+    }
+    function concatFunc(){
+        document.getElementById("result").innerHTML= x.concat(" ",y);
+    }
+    function indexing(){
+        document.getElementById("result").innerHTML= x[3];
+    }
+    function sliceFunc(){
+        document.getElementById("result").innerHTML= x.slice(2,4);
+    }
+    function substringFunc(){
+        document.getElementById("result").innerHTML= x.substring(2,5);
+    }
+    function substrFunc(){
+        document.getElementById("result").innerHTML= x.substr(2,5);
+    }
+    function upper(){
+        document.getElementById("result").innerHTML= x.toUpperCase();
+    }
+    function lower(){
+        document.getElementById("result").innerHTML= x.toLowerCase();
+    }
+</script>
+</body>
+</html>

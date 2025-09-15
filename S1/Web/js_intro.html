@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" >Simple JS Function to add 2 numbers</h1>
+    <label for="num1">Enter first Number :</label>
+    <input type="text" name="number1" id="num1"><br><br>
+    <label for="num1">Enter Second Number :</label>
+    <input type="text" name="number2" id="num2"><br>
+    <button onclick="add();">ADD</button><br><br>
+    <button onclick="red();">Red</button>
+    <button onclick="green();">Green</button>
+    <button onclick="blue();">Blue</button><br><br>
+    <button onclick="welcome()">welcome</button>
+
+    <h1 id="result"></h1>
+</body>
+<script class="module">
+            document.getElementById("title").style.textAlign = "center";
+    function red(){
+        document.getElementById("title").style.color = "red";
+    }
+    function green(){
+        document.getElementById("title").style.color = "green";
+    }
+    function blue(){
+        document.getElementById("title").style.color = "blue";
+    }
+    function add(){
+        let x = parseInt(document.getElementById("num1").value);
+        let y = parseInt(document.getElementById("num2").value);
+        alert("Result got succesfully");
+        document.getElementById("result").innerHTML=x+y;
+        
+    }
+    function welcome(){
+        let x = prompt("Enter your Name :");
+        alert("Welcome "+x);
+    }
+</script>
+</html>
