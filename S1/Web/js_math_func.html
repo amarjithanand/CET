@@ -7,31 +7,41 @@
 </head>
 <body>
     <h3 id="result"></h3>
-    <button onclick="Round()">Round(4.6)</button><br><br>
-    <button onclick="power()">Power(2,3)</button><br><br>
-    <button onclick="Abs()">abs(-25)</button><br><br>
-    <button onclick="Floor()">floor(9.9)</button><br><br>
-    <button onclick="Ceil()">ceil(9.1)</button><br><br>
-    <script>
+    <form action="#" name="inputField">
+<input type="text" id="num1" name="num1" placeholder="Enter First number"><br><br>
+<input type="text" id="num2" name="num2" placeholder="Enter Second number"><br><br>
+</form>
+    <button onclick="Round()">Round()</button><br><br>
+    <button onclick="power()">Power()</button><br><br>
+    <button onclick="Abs()">abs()</button><br><br>
+    <button onclick="Floor()">floor()</button><br><br>
+    <button onclick="Ceil()">ceil()</button><br><br>
+    <script>   
     function Round()
     {
-        document.getElementById("result").innerHTML = Math.round(4.6);
+        let x = Number(document.inputField.num1.value);
+        document.getElementById("result").innerHTML = Math.round(x);
     }
     function power()
     {
-        document.getElementById("result").innerHTML= Math.pow(2,3);
+        let x = Number(document.inputField.num1.value);
+        let y = Number(document.inputField.num2.value);
+        document.getElementById("result").innerHTML= Math.pow(x,y);
     }
     function Abs()
     {
-        document.getElementById("result").innerHTML= Math.abs(-25);
+        let x = Number(document.inputField.num1.value);
+        document.getElementById("result").innerHTML= Math.abs(x);
     }
     function Floor()
     {
-        document.getElementById("result").innerHTML= Math.floor(9.9);
+        let x = Number(document.inputField.num1.value);
+        document.getElementById("result").innerHTML= Math.floor(x);
     }
     function Ceil()
     {
-        document.getElementById("result").innerHTML= Math.ceil(9.1);
+        let x = Number(document.inputField.num1.value);
+        document.getElementById("result").innerHTML= Math.ceil(x);
     }
     </script>
 

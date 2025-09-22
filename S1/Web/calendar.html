@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+</head>
+<body>
+    <h2 class="heading">Calendar</h2>
+    <input type="text" name="yearInput" id="yearInput">
+    <button onclick="getCalendar()">Generate Calendar</button>
+    <div id="calendarContainer" style="display: none;">
+        <table border="2">
+            <tr border="1">
+                <th><button onclick="prev()"><</button></th>
+                <th colspan="5" id="calendarMonth"></th>
+                <th><button onclick="next()">></button></th>
+            </tr>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+            <tr>
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+                <td id="4"></td>
+                <td id="5"></td>
+                <td id="6"></td>
+                <td id="7"></td>
+            </tr>
+            <tr>
+                <td id="8"></td>
+                <td id="9"></td>
+                <td id="10"></td>
+                <td id="11"></td>
+                <td id="12"></td>
+                <td id="13"></td>
+                <td id="14"></td>
+            </tr>
+            <tr>
+                <td id="15"></td>
+                <td id="16"></td>
+                <td id="17"></td>
+                <td id="18"></td>
+                <td id="19"></td>
+                <td id="20"></td>
+                <td id="21"></td>
+            </tr>
+             <tr>
+                <td id="22"></td>
+                <td id="23"></td>
+                <td id="24"></td>
+                <td id="25"></td>
+                <td id="26"></td>
+                <td id="27"></td>
+                <td id="28"></td>
+            </tr>
+            <tr>
+                <td id="29"></td>
+                <td id="30"></td>
+                <td id="31"></td>
+                <td id="32"></td>
+                <td id="33"></td>
+                <td id="34"></td>
+                <td id="35"></td>
+            </tr>
+            <tr>
+                <td id="36"></td>
+                <td id="37"></td>
+                <td id="38"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let i = 0;
+
+        function getCalendar() {
+            document.getElementById("calendarContainer").style.display = "block";
+            document.getElementById("calendarMonth").innerHTML = months[i];
+
+            let year = Number(document.getElementById("yearInput").value);
+            let daysInMonth = new Date(year, i + 1, 0).getDate();
+            let firstDate = new Date(year, i, 1);
+            let firstDay = firstDate.getDay();
+            let day = 1;
+
+            for (let j = 1; j <= 38; j++) {
+                document.getElementById(j).innerHTML = "";
+            }
+
+            for (let j = firstDay; j < firstDay + daysInMonth; j++) {
+                document.getElementById(j + 1).innerHTML = day;
+                day++;
+            }
+        }
+
+        function prev() {
+            if (i > 0) {
+                i--;
+                getCalendar();
+            }
+        }
+
+        function next() {
+            if (i < 11) {
+                i++;
+                getCalendar();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -6,12 +6,13 @@
     <title>Java Script String Functions</title>
 </head>
 <body>
-
-<h3 id="string1">Hello </h3>
-<h3 id="string2">World</h3>
+<form action="#" name="inputField">
+<input type="text" id="string1" name="string1" placeholder="Enter First string"><br><br>
+<input type="text" id="string2" name="string2" placeholder="Enter Second string"><br><br>
+</form>
 <h3 id="result"></h3>
 <button onclick="len()">Length(x)</button><br><br>
-<button onclick="charAtFunc()">charAt(4)</button><br><br>
+<button onclick="charAtFunc()">charAt(2)</button><br><br>
 <button onclick="concatFunc()">concat(x,y)</button><br><br>
 <button onclick="indexing()">x[3]</button><br><br>
 <button onclick="sliceFunc()">slice(2,4)</button><br><br>
@@ -20,33 +21,42 @@
 <button onclick="upper()">toUpperCase(x)</button><br><br>
 <button onclick="lower()">toLowerCase(x)</button><br><br>
 <script>
-    let x = document.getElementById("string1").innerHTML;
-    let y = document.getElementById("string2").innerHTML;
+    
     function len(){
+        let x = document.inputField.string1.value;
         document.getElementById("result").innerHTML= x.length;
     }
     function charAtFunc(){
+        let x = document.inputField.string1.value;
         document.getElementById("result").innerHTML= x.charAt(4);
     }
     function concatFunc(){
+        let x = document.inputField.string1.value;
+        let y = document.inputField.string2.value;
         document.getElementById("result").innerHTML= x.concat(" ",y);
     }
     function indexing(){
+        let x = document.inputField.string1.value;
         document.getElementById("result").innerHTML= x[3];
     }
     function sliceFunc(){
+        let x = document.inputField.string1.value;
         document.getElementById("result").innerHTML= x.slice(2,4);
     }
     function substringFunc(){
+        let x = document.inputField.string1.value;
         document.getElementById("result").innerHTML= x.substring(2,5);
     }
     function substrFunc(){
+        let x = document.inputField.string1.value;
         document.getElementById("result").innerHTML= x.substr(2,5);
     }
     function upper(){
+        let x = document.inputField.string1.value;
         document.getElementById("result").innerHTML= x.toUpperCase();
     }
     function lower(){
+        let x = document.inputField.string1.value;
         document.getElementById("result").innerHTML= x.toLowerCase();
     }
 </script>
