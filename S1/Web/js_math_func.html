@@ -6,16 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h3 id="result"></h3>
+    
     <form action="#" name="inputField">
+        <label for="num1">Number 1</label>
 <input type="text" id="num1" name="num1" placeholder="Enter First number"><br><br>
+        <label for="num2">Number 2</label>
+
 <input type="text" id="num2" name="num2" placeholder="Enter Second number"><br><br>
+<h3 id="result"></h3>
 </form>
     <button onclick="Round()">Round()</button><br><br>
     <button onclick="power()">Power()</button><br><br>
     <button onclick="Abs()">abs()</button><br><br>
     <button onclick="Floor()">floor()</button><br><br>
     <button onclick="Ceil()">ceil()</button><br><br>
+    <button onclick="Sin()">sin()</button><br><br>
+    <button onclick="Cos()">cos()</button><br><br>
+    <button onclick="Sign()">sign()</button><br><br>
+    <button onclick="Random()">random()</button><br><br>
     <script>   
     function Round()
     {
@@ -42,6 +50,25 @@
     {
         let x = Number(document.inputField.num1.value);
         document.getElementById("result").innerHTML= Math.ceil(x);
+    }
+    function Sin()
+    {
+        let x = Number(document.inputField.num1.value);
+        document.getElementById("result").innerHTML= Math.sin(x);
+    }
+    function Cos()
+    {
+        let x = Number(document.inputField.num1.value);
+        document.getElementById("result").innerHTML= Math.cos(x);
+    }
+    function Sign()
+    {
+        let x = Number(document.inputField.num1.value);
+        document.getElementById("result").innerHTML= Math.sign(x);
+    }
+    function Random()
+    {
+        document.getElementById("result").innerHTML= Math.random();
     }
     </script>
 
