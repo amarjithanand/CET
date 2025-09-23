@@ -1,8 +1,10 @@
-li=[]
-n = int(input("Enter the number of elements"))
-for i in range(n):
-    li.append(int(input("Enter the numbers :")))
-sq=[]
-for i in li:
-    sq.append(i**2)
-print(sq)
+str = input("Enter a line of text :")
+li = str.split(" ")
+li.sort()
+se =set(li)
+for x in se:
+    i = 0
+    for y in li:
+        if x==y:
+            i=i+1
+    print(x," : ", i)
