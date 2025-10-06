@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id = "backImage" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=" alt="" width="100%">
+    <h1 id="heading">WELCOME TO MY WEB!!!</h1>
+</body>
+<script>
+    document.getElementById("backImage").addEventListener("mouseenter",changeImage);
+    function changeImage(){
+    document.getElementById("backImage").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtmRC6T06vHOR5vWR9eHbC6r3OcSCVvof66A&s";
+    document.getElementById("heading").innerHTML = "THANK YOU FOR HOVERING OVER THE MOUSE";
+    }
+</script>
+</html>

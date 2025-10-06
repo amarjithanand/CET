@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<body>
+    <button id="abc">Change Background colour</button>
+    <script>
+        document.getElementById("abc").addEventListener("click", myFunction);
+         function myFunction(){
+            let colorVar= 0;
+            for(var i = 0;i<6;i++){
+                let x = Math.round(Math.random()*10);
+                colorVar= (colorVar*10)+x;
+            }
+            colorVar="#"+colorVar;
+            console.log(colorVar);
+            document.body.style.background = colorVar;
+        }
+    </script>
+</body>
+</html> 
