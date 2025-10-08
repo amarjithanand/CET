@@ -1,14 +1,20 @@
-se=set()
-ch = input("Enter the elements : (press * to end)")
+data = dict()
+ch = input("Enter any character to start : (press * to end) ")
 eq = "*"
-while(ch != eq):
-    if ch!= eq:
-            se.add(ch)
-    ch = input("Enter the name : (press * to end)")
 
-de_set = sorted(se,reverse=True)
-as_set = sorted(se)
+while ch != eq:
+    key = input("Enter ID : ").strip()
+    value = input("Enter value :").strip()
+    data[key] = value
+    ch = input("Enter any character to continue : (press * to end) ")
 
-print(f"Descending Order : {de_set}")
-print(f"Ascending Order : {as_set}")
+de_data = sorted(data.items(), reverse=True)  
+as_data = sorted(data.items()) 
 
+print("Descending Order :")
+for key, value in de_data:
+    print(f"{key} : {value}  | ",end="")
+
+print("Ascending Order :") 
+for key, value in as_data:
+    print(f"{key} : {value}  | ",end="")
