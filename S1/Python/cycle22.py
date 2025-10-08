@@ -1,4 +1,4 @@
-n = int(input("Enter the number of rows for the upper half of the diamond: "))
+n = int(input("Enter the number of rows in one half "))
 
 for i in range(n):
     print(" " * (n-i-1),end="")
