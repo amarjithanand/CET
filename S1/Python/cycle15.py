@@ -23,3 +23,4 @@ for key,value in data2.items():
 print("Merged Dictionary is :")
 for key,value in mergedDict.items():
     print(f"{key} : {value}")
+ 
