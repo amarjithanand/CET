@@ -182,4 +182,4 @@ int main()
     Diff(bitstr1, n, inter);
     printf("Set2 on Set1 DIFFERENCE ");
     Diff(bitstr2, n, inter);
-} 
+}
