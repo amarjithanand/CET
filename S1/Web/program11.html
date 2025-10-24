@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: aliceblue;
+        }
+
+        input {
+            background-color: beige;
+        }
+
+        #required {
+            color: red;
+            font-size: 0.75em;
+        }
+
+        .warningMesg {
+            color: red;
+            font-size: 0.75em;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <marquee onmouseover="this.stop()" onmouseout="this.start()">WELCOME TO FRESHER'S WORLD!!!</marquee>
+    </h1>
+    <div class="form-container">
+        <form action="#" name="applicationForm" onsubmit="validate()">
+            <table border="2" cellspacing="1" cellpadding="10px">
+                <tr>
+                    <th colspan="2">
+                        <h3>REGISTRATION FORM</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td><span id="required">*</span>NAME : </td>
+                    <td><input type="text" name="name">
+                        <p id="nameWarn" class="warningMesg" style="display: none;"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span id="required">*</span>AGE :</td>
+                    <td><select name="age">
+                            <option value="" default>Select Age</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <p id="ageWarn" class="warningMesg" style="display: none;"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span id="required">*</span>PASSWORD :</td>
+                    <td><input type="password" name="password">
+                        <p id="passwordWarn" class="warningMesg" style="display: none;"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span id="required">*</span>RE-Enter PASSWORD :</td>
+                    <td><input type="password" name="re-password">
+                        <p id="re-passwordWarn" class="warningMesg" style="display: none;"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="4">SELECT YOUR SECURITY QUESTION :</td>
+                    <td>
+                        <input type="radio" name="security" value="pet-name" id="pet-name">
+                        <label for="pet-name">WHAT IS YOUR PET NAME?</label>
+                    </td>
+                <tr>
+                    <td><input type="radio" name="security" value="best-friend" id="best-friend">
+                        <label for="best-friend">WHO IS YOUR BEST FRIEND?</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="security" value="fav-color" id="fav-color">
+                        <label for="pet-name">WHAT IS YOUR FAVOURITE COLOUR?</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="security" value="fav-teacher" id="fav-teacher">
+                        <label for="fav-teacher">WHO IS YOUR BEST FRIEND?</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ANSWER OF SECURITY QUESTION :</td>
+                    <td><input type="text" name="answer"></td>
+                </tr>
+                <tr>
+                    <td><span id="required">*</span>E-MAIL :</td>
+                    <td><input type="text" name="e-mail">
+                        <p id="e-mailWarn" class="warningMesg" style="display: none;"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>LANGUAGES KNOWN :</td>
+                    <td><input type="checkbox" name="languages" id="malayalam" value="malayalam">
+                        <label for="malayalam">MALAYALAM</label><br>
+                        <input type="checkbox" name="languages" id="english" value="english">
+                        <label for="english">ENGLISH</label><br>
+                        <input type="checkbox" name="languages" id="hindi" value="hindi">
+                        <label for="hindi">HINDI</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan=""><span id="required">*</span>PHONE No.</td>
+                    <td>
+                        <table border="1">
+                            <tr>
+                                <td>Home</td>
+                                <td>Office</td>
+                            </tr>
+                            <tr>
+                                <td><input type="tel" name="phone-home"></td>
+                                <td><input type="tel" name="phone-office"></td>
+                            </tr>
+                        </table>
+                        <p id="phoneWarn" class="warningMesg" style="display: none;"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>UPLOAD CV :</td>
+                    <td><input type="file" name="cv" id="cv"></td>
+                </tr>
+                <th><input type="reset" value="RESET" style="border-radius: 20px;"></th>
+                <th><input type="submit" value="SUBMIT" style="border-radius: 20px;"></th>
+            </table>
+        </form>
+    </div>
+    <script>
+        function validate() {
+            // NAME VALIDATION
+            let x = document.forms["applicationForm"]["name"].value;
+
+            if (x == "") {
+                document.getElementById("nameWarn").innerHTML = "This is a required field";
+                document.getElementById("nameWarn").style.display = "block";
+                event.preventDefault();
+            }
+            // AGE VALIDATION
+            x = document.forms["applicationForm"]["age"].value;
+            if (x == "") {
+                document.getElementById("ageWarn").innerHTML = "This is a required field";
+                document.getElementById("ageWarn").style.display = "block";
+                event.preventDefault();
+            }
+            // PASSWORD VALIDATION
+            x = document.forms["applicationForm"]["password"].value;
+            let y = document.forms["applicationForm"]["re-password"].value;
+
+            if (x == "") {
+                document.getElementById("passwordWarn").innerHTML = "This is a required field";
+                document.getElementById("passwordWarn").style.display = "block";
+                event.preventDefault();
+            }
+            if (y == "") {
+                document.getElementById("re-passwordWarn").innerHTML = "This is a required field";
+                document.getElementById("re-passwordWarn").style.display = "block";
+                event.preventDefault();
+            }
+
+            if (x != y) {
+                document.getElementById("re-passwordWarn").innerHTML = "Password Doesn't Match";
+                document.getElementById("re-passwordWarn").style.display = "block";
+                event.preventDefault();
+            }
+
+            // EMAIL VALIDATION
+            x = document.forms["applicationForm"]["e-mail"].value;
+            if (x == "") {
+                document.getElementById("e-mailWarn").innerHTML = "This is a required field";
+                document.getElementById("e-mailWarn").style.display = "block";
+                event.preventDefault();
+            }
+            function validateEmail(email) {
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                return emailRegex.test(email);
+            }
+            if (!validateEmail(x)) {
+                document.getElementById("e-mailWarn").innerHTML = "Enter a valid email";
+                document.getElementById("e-mailWarn").style.display = "block";
+                event.preventDefault();
+            }
+            // PHONE NO VALIDATION
+            x = document.forms["applicationForm"]["phone-office"].value;
+            y = document.forms["applicationForm"]["phone-home"].value;
+            if ((x == "") && (y == "")) {
+                document.getElementById("phoneWarn").innerHTML = "Enter either one phone number";
+                document.getElementById("phoneWarn").style.display = "block";
+                event.preventDefault();
+            }
+            function validatePhone(phone) {
+                const phoneRegex = /^[0-9]{10}$/;
+                return phoneRegex.test(phone);
+            }
+            if (x == "" || y == "") {
+                x = x ? x : y;
+                if (!validatePhone(x)) {
+                    document.getElementById("phoneWarn").innerHTML = "Enter a valid phone number";
+                    document.getElementById("phoneWarn").style.display = "block";
+                    event.preventDefault();
+                }
+            }
+            else{
+                if (!validatePhone(x)) {
+                    document.getElementById("phoneWarn").innerHTML = "Enter a valid phone number";
+                    document.getElementById("phoneWarn").style.display = "block";
+                    event.preventDefault();
+                }
+                if (!validatePhone(y)) {
+                    document.getElementById("phoneWarn").innerHTML = "Enter a valid phone number";
+                    document.getElementById("phoneWarn").style.display = "block";
+                    event.preventDefault();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
