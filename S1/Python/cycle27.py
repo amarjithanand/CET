@@ -1,9 +1,6 @@
 with open("file1.txt", "w") as f:
-    f.write("Line 1\n")
-    f.write("Line 2\n")
-    f.write("Line 3\n")
-    f.write("Line 4\n")
-    f.write("Line 5\n")
+    for i in range(10):
+        f.write(f"Line {i}\n")
 
 
 with open("file1.txt", "r") as f, open("file2.txt", "w") as fw:

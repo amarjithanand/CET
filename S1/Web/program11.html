@@ -68,7 +68,7 @@
                 </tr>
                 <tr>
                     <td><span id="required">*</span>RE-Enter PASSWORD :</td>
-                    <td><input type="password" name="re-password">
+                    <td><input type="password" name="re-password" id="password">
                         <p id="re-passwordWarn" class="warningMesg" style="display: none;"></p>
                     </td>
                 </tr>
@@ -173,6 +173,7 @@
             if (x != y) {
                 document.getElementById("re-passwordWarn").innerHTML = "Password Doesn't Match";
                 document.getElementById("re-passwordWarn").style.display = "block";
+                document.getElementById("password").style.border ="1px red";
                 event.preventDefault();
             }
 
