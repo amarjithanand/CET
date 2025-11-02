@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warningMesg{
+            color: red;
+            font-size: 0.75em;
+            margin: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <form action="/Amarjith/progressReport.php" method="post" onsubmit="validate()" name="markEntry">
+        <table cellspacing="" cellpadding="10px" border ="2">
+        <tr >
+            <th colspan="2">PROGRESS REPORT</th>
+        </tr>
+        <tr>
+            <th>NAME</th>
+            <td><input type="text" name="name" id="name">
+            <p id="nameWarn" style="display: none;" class="warningMesg"></p></td>
+        </tr>
+        <tr>
+            <th>AGE </th>
+            <td><input type="number" name="age" id="age">
+            <p id="ageWarn" style="display: none;" class="warningMesg"></p></td>
+        </tr>
+        <tr>
+            <th>MARK 1 : </th>
+            <td><input type="number" name="mark-1" id="mark-1">
+            <p id="mark1Warn" style="display: none;" class="warningMesg"></p></td>
+        </tr>
+        <tr>
+            <th>MARK 2 : </th>
+            <td><input type="number" name="mark-2" id="mark-2">
+            <p id="mark2Warn" style="display: none;" class="warningMesg"></p></td>
+        </tr>
+        <tr>
+            <th>MARK 3 : </th>
+            <td><input type="number" name="mark-3" id="mark-3">
+            <p id="mark3Warn" style="display: none;" class="warningMesg"></p></td>
+        </tr>
+        <tr>
+            <th>TOTAL MARK : </th>
+            <td><input type="number" id="totalMark" name="totalMark" readonly></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="calculateTotal()" value="Calculate Total"></td>
+            <td><input type="submit"  value="Generate Report"></td></tr>
+    </table>
+    </form>
+<script>
+    function calculateTotal(){
+        // TOTAL MARK CALCULATION
+            let m1,m2,m3;
+            m1 = Number(document.forms["markEntry"]["mark-1"].value);
+            m2 = Number(document.forms["markEntry"]["mark-2"].value);
+            m3 = Number(document.forms["markEntry"]["mark-3"].value);
+            let total = m1+m2+m3;
+            document.getElementById("totalMark").value = total;
+            return total;
+    }
+    function validate() {
+
+        document.querySelectorAll(".warningMesg").forEach(p => p.style.display = "none");
+            // NAME VALIDATION
+            let x = document.forms["markEntry"]["name"].value;
+
+            if (x == "") {
+                document.getElementById("nameWarn").innerHTML = "This is a required field";
+                document.getElementById("nameWarn").style.display = "block";
+                event.preventDefault();
+            }
+            // AGE VALIDATION
+            x = Number(document.forms["markEntry"]["age"].value);
+            if (x == "") {
+                document.getElementById("ageWarn").innerHTML = "This is a required field";
+                document.getElementById("ageWarn").style.display = "block";
+                event.preventDefault();
+            }
+            else if(x<18||x>25){
+                document.getElementById("ageWarn").innerHTML = "Enter a valid Age";
+                document.getElementById("ageWarn").style.display = "block";
+                event.preventDefault();
+            }
+            // MARK VALIDATION
+            // MARK 1
+            x = Number(document.forms["markEntry"]["mark-1"].value);
+            if (x == "") {
+                document.getElementById("mark1Warn").innerHTML = "This is a required field";
+                document.getElementById("mark1Warn").style.display = "block";
+                event.preventDefault();
+            }
+            else if(x<0||x>50){
+                document.getElementById("mark1Warn").innerHTML = "Mark is in between 0 and 50";
+                document.getElementById("mark1Warn").style.display = "block";
+                event.preventDefault();
+            }
+            // MARK 2
+             x = Number(document.forms["markEntry"]["mark-2"].value);
+            if (x == "") {
+                document.getElementById("mark2Warn").innerHTML = "This is a required field";
+                document.getElementById("mark2Warn").style.display = "block";
+                event.preventDefault();
+            }
+            else if(x<0||x>50){
+                document.getElementById("mark2Warn").innerHTML = "Mark is in between 0 and 50";
+                document.getElementById("mark2Warn").style.display = "block";
+                event.preventDefault();
+            }
+            // MARK 3
+            x = Number(document.forms["markEntry"]["mark-3"].value);
+            if (x == "") {
+                document.getElementById("mark3Warn").innerHTML = "This is a required field";
+                document.getElementById("mark3Warn").style.display = "block";
+                event.preventDefault();
+            }
+            else if(x<0||x>50){
+                document.getElementById("mark3Warn").innerHTML = "Mark is in between 0 and 50";
+                document.getElementById("mark3Warn").style.display = "block";
+                event.preventDefault();
+            }
+            
+            let total = calculateTotal();
+
+        }
+            
+
+</script>
+</body>
+</html>
