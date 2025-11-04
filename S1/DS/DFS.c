@@ -24,7 +24,7 @@ void depthFirstUtil(int graph[V][V], int visited[V], int v) {
 
     for (int i = 0; i < V; i++) {
         if (graph[v][i] == 1 && visited[i] == 0) {
-            depthFirstUtil(graph, visited, i);
+            depthFirstUtil   (graph, visited, i);
         }
     }
 }
