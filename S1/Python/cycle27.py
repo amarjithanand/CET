@@ -1,14 +1,38 @@
-with open("file1.txt", "w") as f:
-    for i in range(10):
-        f.write(f"Line {i}\n")
+class Time:
+    def __init__(self,hours,minute,second):
+        self.hours = hours
+        self.minute = minute
+        self.second = second
+    def display(self):
+        print(f"Hours : {self.hours}")
+        print(f"Minutes : {self.minute}")
+        print(f"Seconds : {self.second}")
+
+    def __add__(self,time2):
+        hour = self.hours + time2.hours
+        minute = self.minute+time2.minute
+        second = self.second + time2.second
+
+        if second>=60:
+            minute+=1
+            second%=60
+        if minute>=60:
+            hour+=1
+            minute%=60
+        if hour>=24:
+            hour%=24
+
+        t3 = Time(hour,minute,second)
+        return t3
+    
+t1 = Time(23,60,59)
+t1.display()
+    
+t2 = Time(0,0,1)
+t2.display()
+
+t3 = t1+t2
+t3.display()
 
 
-with open("file1.txt", "r") as f, open("file2.txt", "w") as fw:
-    for idx, line in enumerate(f):
-        if idx % 2 == 0:
-            fw.write(line)
 
-with open("file2.txt", "r") as f:
-    content = f.read()
-    print("\nContents of file2.txt:")
-    print(content)

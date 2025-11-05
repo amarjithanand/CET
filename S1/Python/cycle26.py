@@ -1,24 +1,14 @@
-class publisher:
-    def __init__(self,name):
-        self.__name = name
-        print("Parent Class Constructor Invoked!!")
-    def display(self):
-        print(f"Author Name : {self.__name}")
+with open("file1.txt", "w") as f:
+    for i in range(10):
+        f.write(f"Line {i}\n")
 
-class Book(publisher):
-    def __init__(self,title, name,price):
-        super().__init__(name)
-        self.__title = title
-        self.__price = price
-        print("Child Class Constructor Invoked!!")
-    
-    def display(self):
-        print("Book Details :")
-        print(f"Book Name : {self.__title}\nPrice of the Book : {self.__price:.2f}")
-        super().display()
-    
-bookName = input("Enter the Book Name :")
-authorName = input("Enter the Author Name :")
-price = float(input("Enter the price of the book :"))
-ob1 = Book(bookName,authorName,price)
-ob1.display()
+
+with open("file1.txt", "r") as f, open("file2.txt", "w") as fw:
+    for idx, line in enumerate(f):
+        if idx % 2 == 0:
+            fw.write(line)
+
+with open("file2.txt", "r") as f:
+    content = f.read()
+    print("\nContents of file2.txt:")
+    print(content)

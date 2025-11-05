@@ -1,10 +1,24 @@
-class Time:
-    def display(self,*args):
-        if len(args)==3:
-            print(f"{args[0]} hours {args[1]} minutes {args[2]} seconds")
-        elif len(args)==6:
-            print(f"{args[0]} hours {args[1]} minutes {args[2]} seconds\n{args[3]} day {args[4]} month {args[5]} year")
+class publisher:
+    def __init__(self,name):
+        self.__name = name
+        print("Parent Class Constructor Invoked!!")
+    def display(self):
+        print(f"Author Name : {self.__name}")
+
+class Book(publisher):
+    def __init__(self,title, name,price):
+        super().__init__(name)
+        self.__title = title
+        self.__price = price
+        print("Child Class Constructor Invoked!!")
     
-ob1 = Time()
-ob1.display(10,20,25)
-ob1.display(10,20,30,45,40,3023)
+    def display(self):
+        print("Book Details :")
+        print(f"Book Name : {self.__title}\nPrice of the Book : {self.__price:.2f}")
+        super().display()
+    
+bookName = input("Enter the Book Name :")
+authorName = input("Enter the Author Name :")
+price = float(input("Enter the price of the book :"))
+ob1 = Book(bookName,authorName,price)
+ob1.display()
