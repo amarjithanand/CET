@@ -72,10 +72,10 @@
 </head>
 <body>
     <div class="container">
-        <form action="studentHome.php" method="post">
+        <form action="home.php" method="post">
             <h2>Login</h2>
-            <input type="text" name="roll" placeholder="Enter your Roll No." class="textInput" required>
-            <input type="password" name="password" placeholder="Enter your password" class="textInput" required>
+            <input type="text" name="username" placeholder="Enter username" class="textInput" required>
+            <input type="password" name="password" placeholder="Enter password" class="textInput" required>
             <input type="submit" value="Login" class="buttonInput">
         </form>
     </div>

@@ -99,6 +99,7 @@
         <form action="submit.php" method="post">
             <h2>Student Register</h2>
             <input type="text" name="name" placeholder="Enter name" class="textInput" required>
+            <input type="text" name="username" placeholder="Enter username" class="textInput" required>
             <?php
              $servername = "localhost";
             $username = "root";
