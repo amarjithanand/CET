@@ -97,6 +97,10 @@
 <body>
     <div class="table-container">
         <h2>📋 Student Records</h2>
+        <form action="viewStudent.php" method = "post">
+        <input type="search" name="searchbar" id="">
+        <input type="submit" value="search">
+        </form>
         <table>
             <tr>
                 <th>Roll No</th>
@@ -119,7 +123,7 @@
 
             $sql = "SELECT * FROM student";
             $result = mysqli_query($conn, $sql);
-
+            
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
