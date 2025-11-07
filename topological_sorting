@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX 100
+
+int adj[MAX][MAX];
+int indegree[MAX];
+int n;
+
+void findIndegree() {
+    for (int i = 0; i < n; i++)
+        indegree[i] = 0;
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            if (adj[i][j] == 1)
+                indegree[j]++;
+}
+
+void topologicalSort() {
+    int count = 0;
+    int queue[MAX], front = 0, rear = -1;
+
+    findIndegree();
+
+    // Enqueue all vertices with indegree 0
+    for (int i = 0; i < n; i++)
+        if (indegree[i] == 0)
+            queue[++rear] = i;
+
+    printf("Topological Order: ");
+    while (front <= rear) {
+        int u = queue[front++];
+        printf("%d ", u + 1);  // +1 for 1-based vertex numbering
+        count++;
+
+        for (int v = 0; v < n; v++) {
+            if (adj[u][v] == 1) {
+                indegree[v]--;
+                if (indegree[v] == 0)
+                    queue[++rear] = v;
+            }
+        }
+    }
+
+    if (count != n)
+        printf("\nGraph has a cycle! Topological sort not possible.");
+}
+
+int main() {
+    int edges, u, v;
+
+    printf("Enter number of vertices: ");
+    scanf("%d", &n);
+    printf("Enter number of edges: ");
+    scanf("%d", &edges);
+
+    for (int i = 0; i < edges; i++) {
+        printf("Enter edge (u v): ");
+        scanf("%d%d", &u, &v);
+        adj[u - 1][v - 1] = 1;  // directed edge
+    }
+
+    topologicalSort();
+    return 0;
+}
