@@ -1,6 +1,6 @@
 #include<stdio.h>
 #define MAX 10
-#define INF 99999
+#define INF 9999
 
 int main(){
     int n;
