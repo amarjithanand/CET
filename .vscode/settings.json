@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.embeddedhtml": "html",
-        "prims": "c"
+        "prims": "c",
+        "kruskal_algorithm": "c"
     }
 }

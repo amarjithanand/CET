@@ -40,5 +40,4 @@ int main(){
     }
     printf("Total cost = %d",total_cost);
     return 0;
-
 }
