@@ -54,7 +54,7 @@ int main(){
         int set_b = find(b);
 
         if(set_a!=set_b){
-            printf("%d --- %d --weight--> %d",a,b,min);
+            printf("%d --- %d --weight--> %d\n",a,b,min);
             cost+=min;
             edgesAccepted++;
             unionSet(set_a,set_b);
