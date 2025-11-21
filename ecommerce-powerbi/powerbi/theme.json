@@ -1,0 +1,93 @@
+{
+  "name": "Professional Modern Dashboard Theme",
+  "dataColors": [
+    "#4FA3FF", 
+    "#A78BFA", 
+    "#F98DBE", 
+    "#FBD267", 
+    "#56D3C3",
+    "#2E2E2E"
+  ],
+  "background": "#F4F4F7",
+  "foreground": "#2E2E2E",
+  "tableAccent": "#4FA3FF",
+
+  "visualStyles": {
+    "*": {
+      "*": {
+        "color": { "solid": { "color": "#2E2E2E" } },
+        "fontFamily": "Segoe UI",
+        "border": true,
+        "borderRadiusTopLeft": 20,
+        "borderRadiusTopRight": 20,
+        "borderRadiusBottomLeft": 20,
+        "borderRadiusBottomRight": 20,
+        "borderColor": { "solid": { "color": "#2E2E2E" } }
+      }
+    },
+
+    "card": {
+      "*": {
+        "background": { "solid": { "color": "#FFFFFF" } },
+        "border": true,
+        "borderColor": { "solid": { "color": "#2E2E2E" } },
+        "borderRadiusTopLeft": 20,
+        "borderRadiusTopRight": 20,
+        "borderRadiusBottomLeft": 20,
+        "borderRadiusBottomRight": 20,
+        "dropShadow": true
+      }
+    },
+
+    "shape": {
+      "*": {
+        "fill": { "solid": { "color": "#FFFFFF", "transparency": 15 } },
+        "border": true,
+        "borderColor": { "solid": { "color": "#2E2E2E" } },
+        "borderRadiusTopLeft": 30,
+        "borderRadiusTopRight": 30,
+        "borderRadiusBottomLeft": 30,
+        "borderRadiusBottomRight": 30,
+        "dropShadow": true
+      }
+    },
+
+    "pieChart": {
+      "*": {
+        "labelStyle": {
+          "fontColor": { "solid": { "color": "#2E2E2E" } },
+          "fontSize": 13,
+          "fontFamily": "Segoe UI Semibold"
+        }
+      }
+    },
+
+    "donutChart": {
+      "*": {
+        "labelStyle": {
+          "fontColor": { "solid": { "color": "#2E2E2E" } },
+          "fontSize": 13,
+          "fontFamily": "Segoe UI Semibold"
+        },
+        "border": true
+      }
+    },
+
+    "lineChart": {
+      "*": {
+        "strokeWidth": 2,
+        "dataPoint": {
+          "color": { "solid": { "color": "#4FA3FF" } }
+        }
+      }
+    },
+
+    "areaChart": {
+      "*": {
+        "lineColor": { "solid": { "color": "#4FA3FF" } },
+        "fillColor": { "solid": { "color": "#4FA3FF" } },
+        "fillTransparency": 75
+      }
+    }
+  }
+}
