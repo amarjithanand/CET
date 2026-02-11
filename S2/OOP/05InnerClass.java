@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class CPU {
+class CPU {
 
     Scanner s = new Scanner(System.in);
     int price;
@@ -44,8 +44,7 @@ public class CPU {
 
     public static void main(String[] args) {
 
-        CPU obj = new CPU(50000, 8, "Intel", 16, "Corsair");
-
-        obj.display();
+        CPU ob= new CPU(50000, 8, "Intel", 16, "Corsair");
+        ob.display();
     }
 }

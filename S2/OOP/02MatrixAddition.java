@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 class Matrix{
     static int r,c;
@@ -9,6 +8,7 @@ class Matrix{
         r = s.nextInt();
         System.out.println("Enter the number of columns in matrix ");
         c = s.nextInt();
+        
     }
     void readMatrix(int[][] matrix){
         Scanner s = new Scanner (System.in);
