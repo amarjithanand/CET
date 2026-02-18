@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.*;
 class search {
     int arr[], key,n;
