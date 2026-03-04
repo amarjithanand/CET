@@ -5,7 +5,7 @@ class Matrix{
     void readSize(){
         Scanner s = new Scanner (System.in);
         System.out.println("Enter the number of row in matrix ");
-        r = s.nextInt();
+        r = s.nextInt(); 
         System.out.println("Enter the number of columns in matrix ");
         c = s.nextInt();
         
