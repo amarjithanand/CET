@@ -16,9 +16,6 @@ class car implements vehicle{
     }
 }
 
-
-
- 
 class bike implements vehicle{
     public void wheel(){
         System.out.println("The bike has 2 wheels");
