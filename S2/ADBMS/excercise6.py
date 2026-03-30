@@ -34,7 +34,7 @@ print("\n\nFemale Students of mark >= 90:")
 for doc in col.find({"gender": "female","mark":{"$gte":90}}):
     print(doc["name"]["fname"],doc["name"]["lname"],"\n",doc["grade"],"\n",doc["mark"],"\n",doc["phone"]["no"],"\n\n")
    
-# 6 Display students with mark >80 and <90 (FIXED)
+# 6 Display students with mark >80 and <90 
 
 print("\n\nStudents with mark between 80 and 90:")
 for doc in col.find({"mark":{"$gt":80,"$lt":90}}):
@@ -61,8 +61,7 @@ for doc in col.find({"place":{"$nin":["Kollam","Thiruvananthapuram"]}}):
 # 10 Display female students from Kollam or Thiruvananthapuram
 
 print("\n\nFemale Students from Kollam or Thiruvananthapuram:")
-for doc in col.find({
-    "gender":"female",
-    "place":{"$in":["Kollam","Thiruvananthapuram"]}
-}):
+for doc in col.find({"gender":"female","place":{"$in":["Kollam","Thiruvananthapuram"]}}):
     print(doc["name"]["fname"],doc["name"]["lname"],"-",doc["mark"])
+
+    
