@@ -61,6 +61,7 @@ for doc in col.find({"place":{"$nin":["Kollam","Thiruvananthapuram"]}}):
 # 10 Display female students from Kollam or Thiruvananthapuram
 
 print("\n\nFemale Students from Kollam or Thiruvananthapuram:")
+
 for doc in col.find({"gender":"female","place":{"$in":["Kollam","Thiruvananthapuram"]}}):
     print(doc["name"]["fname"],doc["name"]["lname"],"-",doc["mark"])
 

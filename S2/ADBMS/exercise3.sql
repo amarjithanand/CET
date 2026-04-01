@@ -90,7 +90,10 @@ WHERE Prerequisite.course_number = (
 	SELECT course_number FROM Course 
 	WHERE course_name = 'Database'
 );
-
+-- SELECT c2.course_name FROM Course c1
+-- JOIN Prerequisite p ON c1.course_number = p.course_number
+-- JOIN Course c2 ON p.prerequisite_number = c2.course_number
+-- WHERE c1.course_name = 'Database';
 
 -- 06
 CREATE VIEW seniors AS
